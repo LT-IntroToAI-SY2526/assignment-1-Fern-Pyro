@@ -20,7 +20,7 @@ Remember: The goal is to LEARN, not just get working code!
 
 """
 MY ORIGINAL AI PROMPT:
-[Paste the prompt you used to generate your problem set here]
+"I am a high school student with a background in java programming, but have no prior experience with python. Create a problem set of 5-7 questions that cover the basics of python a beginner needs to know. Assume knowledge of programming concepts, but not how concepts are applied to python."
 
 Example: "I'm learning Python basics in a high school programming class. 
 I have some experience with Java. Can you create 5-7 practice problems that cover..."
