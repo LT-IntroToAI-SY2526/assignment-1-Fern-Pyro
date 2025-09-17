@@ -31,16 +31,29 @@ I have some experience with Java. Can you create 5-7 practice problems that cove
 # =============================================================================
 
 """
-PROBLEM 1: [Problem Title/Description]
-[Copy the complete problem description from your AI assistant]
+PROBLEM 1: Conditionals
+ Write a Python function grade_level(age) that returns:
+    "Elementary" if age < 11,
+    "Middle" if 11 <= age < 14,
+    "High School" if 14 <= age < 18,
+    "College" otherwise.
+"""
+def grade_level(age: int): #-> str :
+    if age < 11:
+        return("Elementary")
+    elif 11<= age < 14:
+        return("Middle") 
+    elif 14<= age < 18:
+        return("High School")
+    else:
+        return ("College")
 
-Example:
-Problem: Write a function called 'is_even' that takes an integer and returns 
-True if the number is even, False if it's odd.
-
-Example inputs/outputs:
-- is_even(4) should return True
-- is_even(7) should return False
+"""
+🧪 Test Cases:
+ grade_level(10) → "Elementary"
+ grade_level(13) → "Middle"
+ grade_level(17) → "High School"
+ grade_level(19) → "College"
 """
 
 
@@ -70,7 +83,10 @@ print(f"is_even(7): {is_even(7)}")  # Should print False
 """
 
 print("Testing Problem 1:")
-# Add your tests here
+assert grade_level(10) == "Elementary", "grade_level of 10 failed"
+assert grade_level(13) == "Middle", "grade_level of 13 failed"
+assert grade_level(17) == "High School", "grade_level of 17 failed"
+assert grade_level(19) == "College", "grade_level of 19 failed"
 
 print("\nTesting Problem 2:")
 # Add your tests here
