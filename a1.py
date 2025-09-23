@@ -80,9 +80,8 @@ Write a function reverse_words(sentence) that:
 """
 def reverse_words(sentence: str):
     words = sentence.split()
-    for num in range(0, len(words)):
-        if num == 0:
-            return num
+    reversed_sentence = " ".join(words[::-1])
+    return reversed_sentence
 
 """
 PROBLEM 4
@@ -112,7 +111,6 @@ Sort the list in descending order.
 """
 #scores = [88, 92, 79, 93, 85]
 # print("Last Score: ", scores[len(scores)-1])
-# print(scores[len(lst)-1])
 # top3 = sort(scores, reverse = True)
 # top3 = top3[::3]
 # print(top3)
@@ -139,15 +137,18 @@ assert grade_level(10) == "Elementary", "grade_level of 10 failed"
 assert grade_level(13) == "Middle", "grade_level of 13 failed"
 assert grade_level(17) == "High School", "grade_level of 17 failed"
 assert grade_level(19) == "College", "grade_level of 19 failed"
+print("test passed!")
 
 print("\nTesting Problem 2:")
 assert sum_even_numbers(10) == 30, "sum_even_numbers of 10 failed"
 assert sum_even_numbers(4) == 6, "sum_even_numbers of 4 failed"
 assert sum_even_numbers(17) == 72, "sum_even_numbers of 17 failed"
+print("test passed!")
 
 print("\nTesting Problem 3:")
 assert reverse_words("I love Python") == "Python love I", "reverse_words of 'I love Python' failed"
 assert reverse_words("Lane Tech High School") == "School High Tech Lane", "reverse_words of 'Lane Tech High School' failed" 
+print("test passed!")
 
 print("\nTesting Problem 4:")
 assert is_even(10) == "true", "is_even of 10 failed"
@@ -158,10 +159,10 @@ print("test passed!")
 print("\nTesting Problem 5:")
 scores = [88, 92, 79, 93, 85]
 print("Last Score: ", scores[len(scores)-1])
-print(scores[len(lst)-1])
-top3 = sort(scores, reverse = True)
-top3 = top3[::3]
+top3 = sorted(scores, reverse = True)
+print(top3)
+top3 = top3[:3]
 print("Top 3 scores: ", top3)
-print(scores.append(90))
-print("Final Scores: ", scores.sort(reverse = True))
+scores.append(90)
+print("Final Scores: ", sorted(scores, reverse = True))
 
